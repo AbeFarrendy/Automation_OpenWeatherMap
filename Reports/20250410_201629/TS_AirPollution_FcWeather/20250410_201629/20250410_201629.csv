@@ -1,0 +1,56 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_AirPollution_FcWeather,,,,10-04-2025 20:16:33,10-04-2025 20:16:43,9.660s,PASSED
+,,,,,,,
+Test Cases/AirPollution,,,,10-04-2025 20:16:33,10-04-2025 20:16:37,3.311s,PASSED
+"Resp_GeoCoding = sendRequest(findTestObject(""GeoCoding"", [""var_cityName"":cityName, ""var_limit"":limit, ""var_apiKey"":apiKey]), STOP_ON_FAILURE)",,,,10-04-2025 20:16:34,10-04-2025 20:16:36,2.028s,PASSED
+"value_lat = getElementPropertyValue(Resp_GeoCoding, ""[0].lat"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.082s,PASSED
+"value_lon = getElementPropertyValue(Resp_GeoCoding, ""[0].lon"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.033s,PASSED
+"println(""-----------------------------------------------------------"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.007s,PASSED
+println(Resp_GeoCoding.getResponseText()),,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.010s,PASSED
+"println(""LATITUDE : "" + value_lat)",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.004s,PASSED
+"println(""LONGITUDE : "" + value_lon)",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.003s,PASSED
+latitude = value_lat,,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.002s,PASSED
+longitude = value_lon,,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.002s,PASSED
+"println(""-----------------------------------------------------------"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.003s,PASSED
+"Resp_FcPollution = sendRequest(findTestObject(""AirPollution"", [""var_lat"":latitude, ""var_lon"":longitude, ""var_apiKey"":apiKey]), STOP_ON_FAILURE)",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.283s,PASSED
+"value_aqi = getElementPropertyValue(Resp_FcPollution, ""list[0].main.aqi"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.027s,PASSED
+"value_co = getElementPropertyValue(Resp_FcPollution, ""list[0].components.co"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.027s,PASSED
+"value_no = getElementPropertyValue(Resp_FcPollution, ""list[0].components.no"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.028s,PASSED
+"value_no2 = getElementPropertyValue(Resp_FcPollution, ""list[0].components.no2"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.029s,PASSED
+"value_o3 = getElementPropertyValue(Resp_FcPollution, ""list[0].components.o3"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.027s,PASSED
+"value_so2 = getElementPropertyValue(Resp_FcPollution, ""list[0].components.so2"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.026s,PASSED
+"value_pm2_5 = getElementPropertyValue(Resp_FcPollution, ""list[0].components.pm2_5"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.030s,PASSED
+"value_pm10 = getElementPropertyValue(Resp_FcPollution, ""list[0].components.pm10"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:36,0.028s,PASSED
+"value_nh3 = getElementPropertyValue(Resp_FcPollution, ""list[0].components.nh3"")",,,,10-04-2025 20:16:36,10-04-2025 20:16:37,0.037s,PASSED
+"println(""-----------------------------------------------------------"")",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+"println(""--- AIR POLLUTION DATA ---"")",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+println(Resp_FcPollution.getResponseText()),,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+"println(""AIR QUALITY INDEX : "" + value_aqi)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+if (value_aqi == 1),,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+else if (value_aqi == 2),,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.003s,PASSED
+"println(""CARBON MONOXIDE : "" + value_co)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+"println(""NITROGEN OXIDE : "" + value_no)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+"println(""NITROGEN DIOXIDE : "" + value_no2)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+"println(""OZONE : "" + value_o3)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+"println(""SULPHUR DIOXIDE : "" + value_so2)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+"println(""PARTICULATES <2.5μm : "" + value_pm2_5)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+"println(""PARTICULATES <10μm : "" + value_pm10)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.003s,PASSED
+"println(""AMMONIA : "" + value_nh3)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+"println(""-----------------------------------------------------------"")",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+,,,,,,,
+Test Cases/ForecastWeather,,,,10-04-2025 20:16:37,10-04-2025 20:16:43,6.057s,PASSED
+"Resp_GeoCoding = sendRequest(findTestObject(""GeoCoding"", [""var_cityName"":cityName, ""var_limit"":limit, ""var_apiKey"":apiKey]), STOP_ON_FAILURE)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.058s,PASSED
+"value_lat = getElementPropertyValue(Resp_GeoCoding, ""[0].lat"")",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.032s,PASSED
+"value_lon = getElementPropertyValue(Resp_GeoCoding, ""[0].lon"")",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.031s,PASSED
+"println(""-----------------------------------------------------------"")",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+println(Resp_GeoCoding.getResponseText()),,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+"println(""LATITUDE : "" + value_lat)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+"println(""LONGITUDE : "" + value_lon)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+latitude = value_lat,,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+longitude = value_lon,,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.001s,PASSED
+"println(""-----------------------------------------------------------"")",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+ts = days * 8,,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.014s,PASSED
+"Resp_FcWeather = sendRequest(findTestObject(""ForecastWeather"", [""var_lat"":latitude, ""var_lon"":longitude, ""var_apiKey"":apiKey]), STOP_ON_FAILURE)",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.095s,PASSED
+"println(""--- WEATHER FORECAST DATA ---"")",,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.002s,PASSED
+println(Resp_FcWeather.getResponseText()),,,,10-04-2025 20:16:37,10-04-2025 20:16:37,0.003s,PASSED
+"for ([i = 0, i < ts, (i++)])",,,,10-04-2025 20:16:37,10-04-2025 20:16:43,5.554s,PASSED

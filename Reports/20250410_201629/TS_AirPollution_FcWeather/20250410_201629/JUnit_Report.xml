@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TS_AirPollution_FcWeather" time="9.66" tests="2" failures="0" errors="0">
+   <testsuite name="TS_AirPollution_FcWeather" tests="2" failures="0" errors="0" time="9.66" skipped="0" timestamp="10-04-2025T20:16:33" hostname="User - DESKTOP-LP220S8" id="Test Suites/TS_AirPollution_FcWeather">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\User\\Katalon Studio\\Automation OpenWeatherMap API\\Reports\\20250410_201629\\TS_AirPollution_FcWeather\\20250410_201629"/>
+         <property name="logFiles" value="C:\\Users\\User\\Katalon Studio\\Automation OpenWeatherMap API\\Reports\\20250410_201629\\TS_AirPollution_FcWeather\\20250410_201629\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="User - DESKTOP-LP220S8"/>
+         <property name="hostAddress" value="192.168.18.14"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="10.1.1.0"/>
+      </properties>
+      <testcase name="Test Cases/AirPollution" time="3.311" classname="Test Cases/AirPollution" status="PASSED">
+         <system-out><![CDATA[10-04-2025T20:16:33 - [TEST_CASE][PASSED] - Test Cases/AirPollution: Test Cases/AirPollution
+
+10-04-2025T20:16:34 - [TEST_STEP][PASSED] - Resp_GeoCoding = sendRequest(findTestObject("GeoCoding", ["var_cityName":cityName, "var_limit":limit, "var_apiKey":apiKey]), STOP_ON_FAILURE): Send request successfully
+
+10-04-2025T20:16:36 - [MESSAGE][INFO] - HAR: C:\Users\User\Katalon Studio\Automation OpenWeatherMap API\Reports\20250410_201629\TS_AirPollution_FcWeather\20250410_201629\requests\main\GeoCoding_0.har
+
+10-04-2025T20:16:36 - [MESSAGE][PASSED] - Send request successfully
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_lat = getElementPropertyValue(Resp_GeoCoding, "[0].lat"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_lon = getElementPropertyValue(Resp_GeoCoding, "[0].lon"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - println(Resp_GeoCoding.getResponseText()): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - println("LATITUDE : " + value_lat): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - println("LONGITUDE : " + value_lon): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - latitude = value_lat: null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - longitude = value_lon: null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - Resp_FcPollution = sendRequest(findTestObject("AirPollution", ["var_lat":latitude, "var_lon":longitude, "var_apiKey":apiKey]), STOP_ON_FAILURE): Send request successfully
+
+10-04-2025T20:16:36 - [MESSAGE][INFO] - HAR: C:\Users\User\Katalon Studio\Automation OpenWeatherMap API\Reports\20250410_201629\TS_AirPollution_FcWeather\20250410_201629\requests\main\AirPollution_1.har
+
+10-04-2025T20:16:36 - [MESSAGE][PASSED] - Send request successfully
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_aqi = getElementPropertyValue(Resp_FcPollution, "list[0].main.aqi"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_co = getElementPropertyValue(Resp_FcPollution, "list[0].components.co"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_no = getElementPropertyValue(Resp_FcPollution, "list[0].components.no"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_no2 = getElementPropertyValue(Resp_FcPollution, "list[0].components.no2"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_o3 = getElementPropertyValue(Resp_FcPollution, "list[0].components.o3"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_so2 = getElementPropertyValue(Resp_FcPollution, "list[0].components.so2"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_pm2_5 = getElementPropertyValue(Resp_FcPollution, "list[0].components.pm2_5"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_pm10 = getElementPropertyValue(Resp_FcPollution, "list[0].components.pm10"): null
+
+10-04-2025T20:16:36 - [TEST_STEP][PASSED] - value_nh3 = getElementPropertyValue(Resp_FcPollution, "list[0].components.nh3"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("--- AIR POLLUTION DATA ---"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println(Resp_FcPollution.getResponseText()): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("AIR QUALITY INDEX : " + value_aqi): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - if (value_aqi == 1): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - else if (value_aqi == 2): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("AIR QUALITY : FAIR"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("CARBON MONOXIDE : " + value_co): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("NITROGEN OXIDE : " + value_no): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("NITROGEN DIOXIDE : " + value_no2): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("OZONE : " + value_o3): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("SULPHUR DIOXIDE : " + value_so2): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("PARTICULATES <2.5μm : " + value_pm2_5): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("PARTICULATES <10μm : " + value_pm10): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("AMMONIA : " + value_nh3): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/ForecastWeather" time="6.057" classname="Test Cases/ForecastWeather" status="PASSED">
+         <system-out><![CDATA[10-04-2025T20:16:37 - [TEST_CASE][PASSED] - Test Cases/ForecastWeather: Test Cases/ForecastWeather
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - Resp_GeoCoding = sendRequest(findTestObject("GeoCoding", ["var_cityName":cityName, "var_limit":limit, "var_apiKey":apiKey]), STOP_ON_FAILURE): Send request successfully
+
+10-04-2025T20:16:37 - [MESSAGE][INFO] - HAR: C:\Users\User\Katalon Studio\Automation OpenWeatherMap API\Reports\20250410_201629\TS_AirPollution_FcWeather\20250410_201629\requests\main\GeoCoding_2.har
+
+10-04-2025T20:16:37 - [MESSAGE][PASSED] - Send request successfully
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_lat = getElementPropertyValue(Resp_GeoCoding, "[0].lat"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_lon = getElementPropertyValue(Resp_GeoCoding, "[0].lon"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println(Resp_GeoCoding.getResponseText()): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("LATITUDE : " + value_lat): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("LONGITUDE : " + value_lon): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - latitude = value_lat: null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - longitude = value_lon: null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - ts = days * 8: null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - Resp_FcWeather = sendRequest(findTestObject("ForecastWeather", ["var_lat":latitude, "var_lon":longitude, "var_apiKey":apiKey]), STOP_ON_FAILURE): Send request successfully
+
+10-04-2025T20:16:37 - [MESSAGE][INFO] - HAR: C:\Users\User\Katalon Studio\Automation OpenWeatherMap API\Reports\20250410_201629\TS_AirPollution_FcWeather\20250410_201629\requests\main\ForecastWeather_3.har
+
+10-04-2025T20:16:37 - [MESSAGE][PASSED] - Send request successfully
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("--- WEATHER FORECAST DATA ---"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println(Resp_FcWeather.getResponseText()): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - for ([i = 0, i < ts, (i++)]): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:37 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:38 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:39 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:40 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:41 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:42 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - value_dt = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].dt_txt"): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - value_wt_main = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].main"): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - value_wt_desc = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].weather[0].description"): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - value_temp = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.temp"): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - value_humidity = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].main.humidity"): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - value_wind_speed = getElementPropertyValue(Resp_FcWeather, "list[" + i + "].wind.speed"): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("TIMESTAMP [" + i + "] : " + value_dt): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("WEATHER : " + value_wt_main): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("DESCRIPTION : " + value_wt_desc): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("TEMPERATURE : " + value_temp): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("HUMIDITY : " + value_humidity): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("WIND SPEED : " + value_wind_speed): null
+
+10-04-2025T20:16:43 - [TEST_STEP][PASSED] - println("-----------------------------------------------------------"): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[10-04-2025T20:16:33 - [TEST_SUITE][PASSED] - TS_AirPollution_FcWeather: Test Cases/ForecastWeather]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>
